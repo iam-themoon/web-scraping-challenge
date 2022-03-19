@@ -1,3 +1,8 @@
+# -----------------------------------------------
+# Thank you to Dr. Arrington for the walkthrough on this code!
+# -----------------------------------------------
+
+# Imports - Flask, Flask_PyMongo, and our scrape_mars.py scrape file
 from flask import Flask, render_template, redirect, url_for
 from flask_pymongo import PyMongo
 import scrape_mars
@@ -12,8 +17,8 @@ mongo = PyMongo(app)
 def index():
     # access information from the database
     mars_data = mongo.db.marsData.find_one()
-    print(mars_data)
-    return "Flask app loaded!"
+    #print(mars_data)
+    return render_template("index.html", mars=mars_data)
 
 @app.route("/scrape")
 def scrape():

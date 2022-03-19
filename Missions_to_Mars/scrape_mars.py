@@ -1,4 +1,6 @@
-# import splinter, beautiful soup, and chrome driver
+# Thank you to Dr. Arrington for the walkthrough on this code!
+
+# import splinter, beautiful soup, chrome driver, and datetime
 from splinter import Browser
 from bs4 import BeautifulSoup as soup
 from webdriver_manager.chrome import ChromeDriverManager
